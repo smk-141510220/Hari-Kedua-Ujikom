@@ -1,13 +1,43 @@
 @extends('layouts/app')
 @section('content')
-<div class="col-md-9 ">
+<div class="col-md-2 ">
+   
+        <div class="panel-heading">
+           
+              
+                <div class="panel-body" align="center">
+                    
+                    <a class="btn btn-primary form-control" href="{{url('jabatan')}}">Jabatan</a><hr>
+                    <a class="btn btn-primary form-control" href="{{url('golongan')}}">Golongan</a><hr>
+                    <a class="btn btn-primary form-control" href="{{url('pegawai')}}">Pegawai</a><hr>
+                    <a class="btn btn-primary form-control" href="{{url('kategori_lembur')}}">Kategori Lembur</a><hr>  
+                      <a class="btn btn-primary form-control" href="{{url('lemburpegawai')}}">Lembur Pegawai</a><hr>
+                    <a class="btn btn-primary form-control" href="{{url('tunjanganpegawai')}}">Tunjangan </a><hr>
+                    <a class="btn btn-primary form-control" href="{{url('penggajian')}}">Penggajian</a><hr>  
 
+                </div>
+          
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="row">
-        <div class="col-md-10 col-md-offset-2">
-            <div class="panel panel-primary">
-                <div class="panel-heading"><center>Tunjangan Pegawai</center></div>
+        <div class="col-md-8">
+            <div class="panel panel-default">
+              <div class="panel panel-primary">
+                <div class="panel-heading"><h1>Tunjangan Pegawai</h1></div>
+                <div class="panel-body"
+                <div class="form-group"><center>
+                <form action="{{url('tunjangan_pegawai')}}/?kode_tunjangan_id=kode_tunjangan_id">
+                <input type="text" name="kode_tunjangan_id" placeholder="search">
+                    <input type="submit" value="search" class="btn btn-primary">
+</center>
 
+                </form>
+                    
+                </div>
+                    
+                </div>
 	<table class="table table-striped table bordered table-hover">
 		<table class="table table-hover table-striped ">
 			<tr class="danger">

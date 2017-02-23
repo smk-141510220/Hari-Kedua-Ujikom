@@ -17,10 +17,18 @@ class lembur_pegawaiController extends Controller
     public function index()
     {
         $lembur_pegawai=lembur_pegawaiModel::all();
+         $lembur_pegawai=lembur_pegawaiModel::where('jumlah_jam',request('jumlah_jam'))->paginate(0);
+          if(request()->has('jumlah_jam'))
+          {
+            $lembur_pegawai=lembur_pegawaiModel::where('jumlah_jam',request('jumlah_jam'))->paginate(0);
+          }
+          else
+          {
+            $lembur_pegawai=lembur_pegawaiModel::paginate(3);
         return view('lembur_pegawai.index',compact('lembur_pegawai'));
         //
     }
-
+}
     /**
      * Show the form for creating a new resource.
      *

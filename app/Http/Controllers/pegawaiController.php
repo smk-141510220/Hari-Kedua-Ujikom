@@ -14,6 +14,7 @@ use Request;
 
 
 
+
 class pegawaiController extends Controller
 {
     use RegistersUsers;
@@ -27,6 +28,15 @@ class pegawaiController extends Controller
     public function index()
     {
          $pegawai=pegawaiModel::paginate(5);
+          $pegawai=pegawaiModel::where('nip',request('nip'))->paginate(0);
+          if(request()->has('nip'))
+          {
+            $pegawai=pegawaiModel::where('nip',request('nip'))->paginate(0);
+          }
+          else
+          {
+            $pegawai=pegawaiModel::paginate(3);
+        }
         return view('pegawai.index',compact('pegawai'));
     }
 
@@ -104,23 +114,9 @@ class pegawaiController extends Controller
 
 
 
-$file=Input::file('foto');
-        $destination= public_path().'/assets/image';
-        $filename=$file->getClientOriginalName();
-        $uploadsuccess=$file->move($destination,$filename);
 
-        if(Input::hasFile('foto_siswa')){
-            $user= new pegawaiModel;
-            $user->nisn=Input::get('nip');
-            $user->nama_siswa=Input::get('nama_siswa');
-            $user->kode_kk=Input::get('kode_kk');
-            $user->tgl_lahir=Input::get('tgl_lahir');
-            $user->alamat_siswa=Input::get('alamat_siswa');
-            $user->foto_siswa=$filename;
-        $user->save();
 
-        return redirect('pegawai');
-        }
+        
     }
 
     /**

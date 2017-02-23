@@ -1,18 +1,55 @@
 @extends('layouts/app')
 @section('content')
-<div class="col-md-9 ">
+<div class="col-md-2 ">
+   
+        <div class="panel-heading">
+           
+              
+                <div class="panel-body" align="center">
+                    
+                    <a class="btn btn-primary form-control" href="{{url('jabatan')}}">Jabatan</a><hr>
+                    <a class="btn btn-primary form-control" href="{{url('golongan')}}">Golongan</a><hr>
+                    <a class="btn btn-primary form-control" href="{{url('pegawai')}}">Pegawai</a><hr>
+                    <a class="btn btn-primary form-control" href="{{url('kategori_lembur')}}">Kategori Lembur</a><hr>  
+                      <a class="btn btn-primary form-control" href="{{url('lemburpegawai')}}">Lembur Pegawai</a><hr>
+                    <a class="btn btn-primary form-control" href="{{url('tunjanganpegawai')}}">Tunjangan </a><hr>
+                    <a class="btn btn-primary form-control" href="{{url('penggajian')}}">Penggajian</a><hr>  
 
+                </div>
+          
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="row">
-        <div class="col-md-10 col-md-offset-2">
-            <div class="panel panel-primary">
-                <div class="panel-heading"><center>pegawai</center></div>
+        <div class="col-md-8">
+            <div class="panel panel-default">
+              <div class="panel panel-primary">
+                <div class="panel-heading"><h1>Lembur Pegawai</h1></div>
+                <div class="panel-body"
+                <div class="form-group"><center>
+                <form action="{{url('pegawai')}}/?nip=nip">
+                <input type="text" name="nip" placeholder="search nip">
+                	<input type="submit" value="search" class="btn btn-primary">
+</center>
 
-	<table class="table table-striped table bordered table-hover">
+                </form>
+                	
+                </div>
+                	
+                </div>
+                 <table class="table table-striped table bordered table-hover">
 		<table class="table table-hover table-striped ">
 			<tr class="danger">
 			  <div class="panel-body">
-                    <table class="table" border="2">
+			   
+
+                </form>
+                	
+                </div>
+                	
+                </div>
+                    <table class="table" border="1">
                         <thead>
 			<a href="{{url('pegawai/create')}}" class="btn btn-success">Tambah Data</a> 
 			

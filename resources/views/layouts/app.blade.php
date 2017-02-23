@@ -15,7 +15,7 @@
 <style>
     html ,body
     {
-    background-image: url(fg.png );
+    background-image: url(f.png );
 }
 </style>
     <!-- Scripts -->
@@ -54,10 +54,9 @@
                         {{('kategori lembur') }}
                     </a><a class="navbar-brand" href="{{ url('/lembur_pegawai') }}">
                         {{('lembur pegawai') }}
-                    </a><a class="navbar-brand" href="{{ url('/tunjangan') }}">
-                        {{('tunjangan') }}
+                  
                     </a><a class="navbar-brand" href="{{ url('/tunjangan_pegawai') }}">
-                        {{('tunjangan pegawai') }}
+                        {{('tunjangan ') }}
                         <a class="navbar-brand" href="{{ url('/penggajian') }}">
                         {{( 'penggajian') }}
                     </a>

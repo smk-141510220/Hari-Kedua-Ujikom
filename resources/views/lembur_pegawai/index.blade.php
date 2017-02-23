@@ -1,17 +1,49 @@
 @extends('layouts/app')
 @section('content')
-<div class="col-md-9 ">
+<div class="col-md-2 ">
+   
+        <div class="panel-heading">
+           
+              
+                <div class="panel-body" align="center">
+                    
+                    <a class="btn btn-primary form-control" href="{{url('jabatan')}}">Jabatan</a><hr>
+                    <a class="btn btn-primary form-control" href="{{url('golongan')}}">Golongan</a><hr>
+                    <a class="btn btn-primary form-control" href="{{url('pegawai')}}">Pegawai</a><hr>
+                    <a class="btn btn-primary form-control" href="{{url('kategori_lembur')}}">Kategori Lembur</a><hr>  
+                      <a class="btn btn-primary form-control" href="{{url('lemburpegawai')}}">Lembur Pegawai</a><hr>
+                    <a class="btn btn-primary form-control" href="{{url('tunjanganpegawai')}}">Tunjangan </a><hr>
+                    <a class="btn btn-primary form-control" href="{{url('penggajian')}}">Penggajian</a><hr>  
 
+                </div>
+          
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-primary">
-                <div class="panel-heading"><center>Lembur Pegawai</center></div>
-
+        <div class="col-md-8">
+            <div class="panel panel-default">
+              <div class="panel panel-primary">
+                <div class="panel-heading"><h1>Lembur Pegawai</h1></div>
+                <div class="panel-body"
+			   
+<div class="form-group"><center>
+                <form action="{{url('lembur_pegawai')}}/?jumlah_jam=jumlah_jam">
+                <input type="text" name="jumlah_jam" placeholder="search jumlah jam ">
+                	<input type="submit" value="search " class="btn btn-primary">
+</center>
 	<table class="table table-striped table bordered table-hover">
 		<table class="table table-hover table-striped ">
 			<tr class="danger">
 			  <div class="panel-body">
+			   
+
+                </form>
+                	
+                </div>
+                	
+                </div>
                     <table class="table" border="1">
                         <thead>
 			<a href="{{url('lembur_pegawai/create')}}" class="btn btn-success">Tambah Data</a> 

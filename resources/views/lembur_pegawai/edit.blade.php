@@ -21,7 +21,7 @@
                         {!! Form::text('jumlah_jam',null,['class'=>'form-control','required']) !!}
                     </div>
                     <div class="form-group">
-                        {!! Form::submit('SAVE', ['class' => 'btn btn-primary form-control']) !!}
+                        {!! Form::submit('Update', ['class' => 'btn btn-primary form-control']) !!}
                     </div>
                     {!! Form::close() !!}
                 </div>

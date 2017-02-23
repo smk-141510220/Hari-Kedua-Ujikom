@@ -1,21 +1,55 @@
 @extends('layouts/app')
 @section('content')
 
-<div class="col-md-9 ">
-<table class="table table-striped table bordered table-hover">
+<div class="col-md-2 ">
+   
+        <div class="panel-heading">
+           
+              
+                <div class="panel-body" align="center">
+                    
+                    <a class="btn btn-primary form-control" href="{{url('jabatan')}}">Jabatan</a><hr>
+                    <a class="btn btn-primary form-control" href="{{url('golongan')}}">Golongan</a><hr>
+                    <a class="btn btn-primary form-control" href="{{url('pegawai')}}">Pegawai</a><hr>
+                    <a class="btn btn-primary form-control" href="{{url('kategori_lembur')}}">Kategori Lembur</a><hr>  
+                      <a class="btn btn-primary form-control" href="{{url('lemburpegawai')}}">Lembur Pegawai</a><hr>
+                    <a class="btn btn-primary form-control" href="{{url('tunjanganpegawai')}}">Tunjangan </a><hr>
+                    <a class="btn btn-primary form-control" href="{{url('penggajian')}}">Penggajian</a><hr>  
+
+                </div>
+          
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="panel panel-default">
+              <div class="panel panel-primary">
+                <div class="panel-heading"><h1>Kategori Lembur</h1></div>
+                <div class="panel-body"
+                <div class="form-group"><center>
+                <form action="{{url('kategori_lembur')}}/?kode_lembur=kode_lembur">
+                <input type="text" name="kode_lembur" placeholder="search">
+                	<input type="submit" value="search" class="btn btn-primary">
+</center>
+
+                </form>
+                	
+                </div>
+                	
+                </div>
+
+	<table class="table table-striped table bordered table-hover">
 		<table class="table table-hover table-striped ">
 			<tr class="danger">
 			  <div class="panel-body">
                     <table class="table" border="1">
                         <thead>
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-primary">
-                <div class="panel-heading"><center>Kategori Lembur</center></div>
 
-
-			<a href="{{url('kategori_lembur/create')}}" class="btn btn-success">Tambah Data</a> 
+<a href="{{url('kategori_lembur/create')}}" class="btn btn-success">Tambah Data</a> 
+	<thead>
+<br><br>
 	<thead>
 		<tr class="bg-info">
 		<th>No</th>
@@ -54,7 +88,7 @@
 	</tbody>
 </table>
 
-
+	{{$kategori_lembur->links()}}
 
 
 @endsection

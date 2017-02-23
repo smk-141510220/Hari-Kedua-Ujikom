@@ -18,10 +18,10 @@ class CreateTableTunjangan extends Migration
             $table->string('kode_tunjangan')->unique();
             
             $table->integer('jabatan_id')->unsigned();
-            $table->foreign('jabatan_id')->references('id')->on('jabatan')->OnDelete('cascade')->OnUpdate('cascade');
+            $table->foreign('jabatan_id')->references('id')->on('jabatan')->onDelete('cascade')->onUpdate('cascade');
 
             $table->integer('golongan_id')->unsigned();
-            $table->foreign('golongan_id')->references('id')->on('golongan')->OnDelete('cascade')->OnUpdate('cascade');
+            $table->foreign('golongan_id')->references('id')->on('golongan')->onDelete('cascade')->onUpdate('cascade');
 
             $table->string('status');
             $table->integer('jumlah_anak');

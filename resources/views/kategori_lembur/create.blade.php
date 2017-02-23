@@ -2,22 +2,12 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="col-md-9 ">
-<center><h1>Kategori Lembur</h1>
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-primary">
-                <div class="panel-heading"><center>Index Jabatan</center></div>
-
-    <table class="table table-striped table bordered table-hover">
-        <table class="table table-hover table-striped ">
-            <tr class="danger">
-              <div class="panel-body">
-                    <table class="table" border="1">
-                        <thead>
-            <a href="{{url('jabatan/create')}}" class="btn btn-success">Tambah Data</a> 
-                {{$jabatan->links()}}
+            <div class="panel panel-default">
+                <div class="panel-heading">buat lembur pegawai </div>
+                <div class="panel-body">
 
 
                      {!! Form::open(['url' => 'kategori_lembur']) !!}

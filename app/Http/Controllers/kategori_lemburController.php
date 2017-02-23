@@ -18,6 +18,17 @@ class kategori_lemburController extends Controller
     public function index()
     {
         $kategori_lembur=kategori_lemburModel::paginate(10);
+
+         $kategori_lembur=kategori_lemburModel::where('kode_lembur',request('kode_lembur'))->paginate(0);
+          if(request()->has('kode_lembur'))
+          {
+            $kategori_lembur=kategori_lemburModel::where('kode_lembur',request('kode_lembur'))->paginate(0);
+          }
+          else
+          {
+            $kategori_lembur=kategori_lemburModel::paginate(3);
+          }
+        
         return view('kategori_lembur.index',compact('kategori_lembur'));
     }
 

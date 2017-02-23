@@ -1,14 +1,34 @@
 @extends('layouts/app')
 @section('content')
+<div class="col-md-2 ">
+   
+        <div class="panel-heading">
+           
+                
 
-<div class="col-md-9 ">
 
-<div class="container">
+                <div class="panel-body" align="center">
+                    
+                    <a class="btn btn-primary form-control" href="{{url('jabatan')}}">Jabatan</a><hr>
+                    <a class="btn btn-primary form-control" href="{{url('golongan')}}">Golongan</a><hr>
+                    <a class="btn btn-primary form-control" href="{{url('pegawai')}}">Pegawai</a><hr>
+                    <a class="btn btn-primary form-control" href="{{url('kategori_lembur')}}">Kategori Lembur</a><hr>  
+                      <a class="btn btn-primary form-control" href="{{url('lemburpegawai')}}">Lembur Pegawai</a><hr>
+                    <a class="btn btn-primary form-control" href="{{url('tunjanganpegawai')}}">Tunjangan </a><hr>
+                    <a class="btn btn-primary form-control" href="{{url('penggajian')}}">Penggajian</a><hr>  
+
+                </div>
+          
+        </div>
+    </div>
+</div>
+
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-primary">
-                <div class="panel-heading"><center>Golongan</center></div>
-                <div class="panel-body">
+        <div class="col-md-8">
+            <div class="panel panel-default">
+              <div class="panel panel-primary">
+                <div class="panel-heading"><h1>Golongan</h1></div>
+                <div class="panel-body"
                 <div class="form-group"><center>
                 <form action="{{url('golongan')}}/?nama_golongan=nama_golongan">
                 <input type="text" name="nama_golongan" placeholder="search">
