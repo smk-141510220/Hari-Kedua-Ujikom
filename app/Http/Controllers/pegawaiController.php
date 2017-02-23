@@ -95,13 +95,10 @@ class pegawaiController extends Controller
         }
 
 
-
-         $akun=new User ;
-         $akun->name=Input::get('name');
-         $akun->email=Input::get('email');
-         $akun->password=bcrypt(Input::get('password'));
-         $akun->permision=Input::get('permision');
-         $akun->save();
+ $file=Input::file('foto');
+        $destination= public_path().'/assets/image';
+        $filename=$file->getClientOriginalName();
+        $uploadsuccess=$file->move($destination,$filename);
 
          $pegawai=new pegawaiModel ;
          $pegawai->nip=Input::get('nip');
